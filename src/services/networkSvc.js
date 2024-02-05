@@ -69,7 +69,7 @@ export default {
           await new Promise((resolve, reject) => {
             script.onload = resolve;
             script.onerror = reject;
-            script.src = `https://apis.google.com/js/api.js?${Date.now()}`;
+            script.src = `static/js/api.js?${Date.now()}`;
             try {
               document.head.appendChild(script); // This can fail with bad network
               timeout = setTimeout(reject, networkTimeout);
